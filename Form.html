@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="main">
+  <h1>📝 Student Form</h1>
+
+  <div class="output">
+    <form id="studentForm">
+
+      <label>Name</label><br>
+      <input type="text" id="name" required><br><br>
+
+      <label>Age</label><br>
+      <input type="number" id="age" required><br><br>
+
+      <label>Current Study</label><br>
+      <input type="text" id="study" placeholder="e.g. 10th, 12th, BTech, Diploma," required><br><br>
+
+      <label>Subject Interest</label><br>
+      <input type="text" id="interest" placeholder="e.g. Coding, Medical, Design" required><br><br>
+
+      <label>Career Interest</label><br>
+      <input type="text" id="career" placeholder="e.g. Tech, Medical, Govt" required><br><br>
+
+      <button type="submit">Submit</button>
+
+    </form>
+  </div>
+</div>
+
+<script>
+document.getElementById("studentForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let age = document.getElementById("age").value;
+  let study = document.getElementById("study").value.toLowerCase();
+  let interest = document.getElementById("interest").value.toLowerCase();
+  let career = document.getElementById("career").value.toLowerCase();
+
+  let recommendation = "";
+
+  if(age < 18){
+    recommendation = "Focus on Basics + School Learning";
+  }
+  else if(study.includes("btech") && interest.includes("coding")){
+    recommendation = "Recommended: Software Development / Web Development";
+  }
+  else if(interest.includes("medical")){
+    recommendation = "Recommended: Medical / Healthcare Field";
+  }
+  else if(interest.includes("design")){
+    recommendation = "Recommended: UI/UX Design / Graphic Design";
+  }
+  else {
+    recommendation = "Explore Career Options Based on Skills";
+  }
+
+  localStorage.setItem("studentData", JSON.stringify({
+    name, age, study, interest, career, recommendation
+  }));
+
+  window.location.href = "success.html";
+});
+</script>
+
+</body>
+</html>

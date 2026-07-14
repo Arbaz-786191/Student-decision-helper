@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>Decision Helper</h2>
+
+    <li onclick="show('career')">🎯 Career</li>
+    <li onclick="show('skills')">📊 Skills</li>
+    <li onclick="show('study')">📚 Study</li>
+    <li onclick="show('goal')">🏆 Goals</li>
+    <li onclick="show('compare')">⚖ Compare</li>
+    <li onclick="show('resume')">📄 Resume</li>
+    <li onclick="show('quiz')">🧠 Quiz</li>
+    <li onclick="show('progress')">📈 Progress</li>
+    <li onclick="show('tasks')">📅 Tasks</li>
+    <li onclick="show('tips')">💡 Tips</li>
+    <li onclick="show('profile')">👤 Profile</li>
+
+    <!-- ✅ ADDED -->
+    <li onclick="goGuidance()">📘 Guidance</li>
+
+    <li onclick="logout()">🚪 Logout</li>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <h1>👋 Welcome Student</h1>
+
+    <!-- SEARCH BAR -->
+    <input type="text" placeholder="🔍 Search career..." class="search">
+
+    <!-- CARDS -->
+    <div class="cards">
+      <div class="card" onclick="show('career')">🎯 Career</div>
+      <div class="card" onclick="show('skills')">📊 Skills</div>
+      <div class="card" onclick="show('study')">📚 Study</div>
+      <div class="card" onclick="show('goal')">🏆 Goals</div>
+      <div class="card" onclick="show('quiz')">🧠 Quiz</div>
+      <div class="card" onclick="show('progress')">📈 Progress</div>
+
+      <!-- ✅ ADDED -->
+      <div class="card" onclick="goGuidance()">📘 Guidance</div>
+    </div>
+
+    <!-- OUTPUT -->
+    <div id="output" class="output">
+      👉 Click any section to explore
+    </div>
+
+    <p class="copyright">© 2026 All Rights Reserved</p>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+<!-- ✅ ADDED SCRIPT -->
+<script>
+function goGuidance() {
+  window.location.href = "guidance.html";
+}
+</script>
+
+</body>
+</html>
