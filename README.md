@@ -31,11 +31,6 @@ The project offers a clean and user-friendly interface with a modern dark theme,
 * HTML5
 * CSS3
 * JavaScript
-
-### Backend
-
-* Core Java
-
 ---
 
 ## 📂 Project Structure
@@ -62,7 +57,7 @@ Student-Decision-Helper/
 1. Clone the repository.
 2. Open the project in Visual Studio Code.
 3. Run `login.html` using Live Server or any web browser.
-4. Start the Core Java backend.
+4. Start 
 5. Register/Login and explore the application.
 
 ---
@@ -86,15 +81,11 @@ Student-Decision-Helper/
 
 ---
 
-## 🔮 Future Enhancements
-
-* AI-powered career recommendations
-* Database integration (MySQL)
+## Enhancements
 * User profile management
 * Admin dashboard
 * Career roadmap generation
 * College and course recommendations
-* Analytics and reports
 
 
 **Arbaz Khan**
